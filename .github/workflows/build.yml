@@ -64,7 +64,7 @@ jobs:
             ${{ runner.os }}-
             
       - name: install pip
-        run: sudo apt install python3-pip
+        run: apt install python3-pip
       - name: Install distutils
         run: pip3 install setuptools
       - name: West Init
