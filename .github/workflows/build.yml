@@ -63,7 +63,8 @@ jobs:
             ${{ runner.os }}-build-
             ${{ runner.os }}-
             
-      
+      - name: Install pip
+        run: apt install python-pip
       - name: Install distutils
         run: python3 -m pip setuptools
       - name: West Init
