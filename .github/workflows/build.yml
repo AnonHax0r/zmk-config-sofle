@@ -12,7 +12,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Install yaml2json
-        run: python3.12 -m pip install remarshal
+        run: python3 -m pip install remarshal
       - id: set-matrix
         name: Fetch Build Matrix
         run: |
@@ -67,7 +67,7 @@ jobs:
       - name: Install pip
         run: apt install python3-pip -y
       - name: Install distutils
-        run: sudo -H python3 -m pip install setuptools 
+        run: python3 -m pip install setuptools 
       - name: West Init
         run: west init -l config
       - name: West Update
