@@ -67,7 +67,7 @@ jobs:
       - name: Install pip
         run: apt install python3-pip -y
       - name: Install distutils
-        run: python3 -m pip setuptools
+        run: python3 -m pip install setuptools
       - name: West Init
         run: west init -l config
       - name: West Update
