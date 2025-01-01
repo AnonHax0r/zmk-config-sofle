@@ -12,7 +12,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Install distutils
-        run: apt install python3-setuptools
+        run: sudo apt install python3-setuptools
       - name: Install yaml2json
         run: python3 -m pip install remarshal
       - id: set-matrix
