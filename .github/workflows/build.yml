@@ -62,9 +62,10 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
-            
+      - name: Install pipp
+        run: apt update  
       - name: Install pip
-        run: apt install python-pip
+        run: apt install python3-pip
       - name: Install distutils
         run: python3 -m pip setuptools
       - name: West Init
