@@ -62,8 +62,6 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
-      - name: Install distutils3
-        run: pip install setuptools
       - name: Install distutils4
         run: pip3 install setuptools
       - name: West Init
