@@ -11,10 +11,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Install distutils3
-        run: pip install setuptools
-      - name: Install distutils4
-        run: pip3 install setuptools
       - name: Install yaml2json
         run: python3 -m pip install remarshal
       - id: set-matrix
@@ -66,6 +62,10 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
+      - name: Install distutils3
+        run: pip install setuptools
+      - name: Install distutils4
+        run: pip3 install setuptools
       - name: West Init
         run: west init -l config
       - name: West Update
