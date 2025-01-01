@@ -4,15 +4,17 @@ name: Build
 
 jobs:
   matrix:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     name: Fetch Build Keyboards
     outputs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Install distutils
-        run: sudo apt install python3-setuptools
+      - name: Install distutils3
+        run: pip install setuptools
+      - name: Install distutils4
+        run: pip3 install setuptools
       - name: Install yaml2json
         run: python3 -m pip install remarshal
       - id: set-matrix
